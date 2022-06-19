@@ -1,10 +1,15 @@
 import styles from "./Hole.module.scss";
 import cn from "classnames";
 
+import { useScoreDispatch } from "ScoreContext";
 import { ReactComponent as Mole } from "assets/mole.svg";
 
 function Hole({ active }) {
-  const handleScore = () => {};
+  const dispatch = useScoreDispatch();
+
+  const handleScore = () => {
+    if (active) dispatch({ type: "PLUSE" });
+  };
 
   return (
     <div className={styles.wrapper} onClick={handleScore}>

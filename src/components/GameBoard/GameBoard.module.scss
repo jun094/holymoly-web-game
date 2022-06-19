@@ -1,10 +1,15 @@
-.field {
-  background-color: var(--tertiary);
+.container {
+  width: 100%;
+  display: table;
   margin-top: 50px;
-  border-radius: 16px;
-  padding: 32px;
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  justify-content: center;
+  overflow-x: scroll;
+}
+
+.wrapper {
+  width: 425px;
+  border: 1px solid red;
+  color: var(--primary);
+  margin: 0 auto;
+  padding: 0 16px;
 }
