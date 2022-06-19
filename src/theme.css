@@ -46,6 +46,7 @@ p {
 :root {
     --primary: #FFCC66;
     --secondary: #99521F;
+    --tertiary: #028F44;
 
     --gray0: #fff;
     --gray100: #F0F0F5;

@@ -1,0 +1,10 @@
+.field {
+  background-color: var(--tertiary);
+  margin-top: 50px;
+  border-radius: 16px;
+  padding: 32px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}

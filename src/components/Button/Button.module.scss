@@ -1,0 +1,25 @@
+@import "utils/styles";
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  @include desc;
+
+  &_primary {
+    background-color: var(--primary);
+    color: var(--gray900);
+  }
+  &_secondary {
+    background-color: var(--secondary);
+    color: var(--gray0);
+  }
+  &_tertiary {
+    background-color: var(--tertiary);
+    color: var(--gray0);
+  }
+}
