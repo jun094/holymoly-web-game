@@ -2,12 +2,14 @@ import { useScoreState } from "ScoreContext";
 
 import styles from "./Score.module.scss";
 
-function Score() {
+function Score({ limit }) {
   const { score } = useScoreState();
 
-  window.score = score;
- 
-  return <h2 className={styles.score}>{score} / 10</h2>;
+  return (
+    <h4 className={styles.score}>
+      point : <span className={styles.score_highlight}>{score}</span> / {limit}
+    </h4>
+  );
 }
 
 export default Score;

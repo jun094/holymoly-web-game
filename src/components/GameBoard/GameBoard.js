@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Field from "components/Field";
-import Button from "components/Button";
+import GameButton from "components/GameButton";
 import Score from "components/Score";
 
 import { useScoreState, useScoreDispatch } from "ScoreContext";
@@ -13,10 +13,10 @@ function GameBoard({ randomArr, chance, num, delay }) {
   const { count } = useScoreState();
   const [isPlay, setIsPlay] = useState(false);
 
-  const handleStart = () => {
+  const onStart = () => {
     setIsPlay(true);
   };
-  const handleReStart = () => {
+  const onRestart = () => {
     setIsPlay(true);
     dispatch({
       type: "RESET",
@@ -27,10 +27,10 @@ function GameBoard({ randomArr, chance, num, delay }) {
     <article className={styles.container}>
       <div className={styles.wrapper}>
         <header>
-          <h1>
+          <h2 className={styles.header}>
             Welcome ! <br />
             whack-a-mole
-          </h1>
+          </h2>
         </header>
 
         <Field
@@ -42,12 +42,12 @@ function GameBoard({ randomArr, chance, num, delay }) {
           setIsPlay={setIsPlay}
         />
 
-        <footer>
-          <Score />
+        <footer className={styles.footer}>
+          <Score limit={chance}/>
           {count === chance + 1 ? (
-            <Button onClick={handleReStart}>RE START</Button>
+            <GameButton onClick={onRestart}>RE START</GameButton>
           ) : (
-            <Button onClick={handleStart}>START</Button>
+            <GameButton onClick={onStart}>START</GameButton>
           )}
         </footer>
       </div>

@@ -12,8 +12,11 @@ function Hole({ active }) {
   };
 
   return (
-    <div className={styles.wrapper} onClick={handleScore}>
-      <Mole className={cn(styles.mole, active && styles.mole_active)} />
+    <div className={cn(styles.wrapper, active && styles.wrapper_active)}>
+      <Mole
+        className={cn(styles.mole, active && styles.mole_active)}
+        onClick={handleScore}
+      />
     </div>
   );
 }

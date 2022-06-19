@@ -6,6 +6,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+
+  &_active {
+    overflow: visible;
+  }
 }
 
 .mole {
@@ -13,8 +18,12 @@
   height: 100%;
   margin-bottom: 32px;
   opacity: 0;
+  cursor: pointer;
+  transform: translateY(50px);
+  transition: 0.2s all ease-in-out;
 
   &_active {
     opacity: 1;
+    transform: translateY(0);
   }
 }
