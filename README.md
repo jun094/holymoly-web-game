@@ -1,70 +1,18 @@
-# Getting Started with Create React App
+# 두더지 게임
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. 게임이 시작되면 1초 후부터 두더지가 구멍에서 랜덤하게 나옵니다.
+2. 두더지가 나타난 곳을 클릭할 경우, 두더지를 잡은 것으로 간주합니다.
+3. 두더지가 나타난 구멍을 사용자가 1초 내에 클릭하지 않을 경우, 두더지를 잡지 못한 것으로 간주합니다.
+4. 사용자가 두더지를 잡거나 제한 시간을 초과되었을 경우, 1초의 추가 가견을 두고 또 다시 랜덤한 두더지 구멍에서 두더지가 나옵니다.
+5. 다음 번에 두더지가 등장하는 구멍은 **이전의 구멍가 반드시 다른 구멍**입니다.
+6. "restart" 버튼을 누르면, 점수가 초기화됨과 동시에, 게임이 재시작됩니다.!
 
-## Available Scripts
+![스크린샷 2022-06-29 오후 10 54 08](https://user-images.githubusercontent.com/42564107/176457815-54850ff4-f1bd-4ff2-89a5-e9291cdd4b98.png)
 
-In the project directory, you can run:
 
-### `npm start`
+## 기술적 이슈
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- setInterval 커스텀 훅스 `src/hooks/useInterval`
+- Context API를 활용한 전역상태관리 `src/ScoreContext`
+- 전역 스타일링 `theme.css`, `index.css(reset)`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
